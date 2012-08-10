@@ -133,6 +133,26 @@ my %commands = (
                 w    => "aptitude why",
                 u    => "sudo aptitude update && sudo aptitude upgrade",
                 uu   => "sudo aptitude update && sudo aptitude full-upgrade",
+                moo  => <<EOF,
+echo '
+                     @@@@@@ @
+                   @@@@     @@
+                  @@@@ =   =  @@
+                 @@@ @ _   _   @@
+                 @@@ @(0)|(0)  @@
+                @@@@   ~ | ~   @@
+                @@@ @  (o1o)    @@
+               @@@    #######    @
+               @@@   ##{+++}##   @@
+              @@@@@ ## ##### ## @@@@
+              @@@@@#############@@@@
+             @@@@@@@###########@@@@@@
+            @@@@@@@#############@@@@@
+            @@@@@@@### ## ### ###@@@@
+             @ @  @              @  @
+               @                    @
+...."Have you GNUed today?"...'
+EOF
                );
 
 =head1 CONFIG
