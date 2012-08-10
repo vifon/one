@@ -163,8 +163,8 @@ if (-r "$ENV{HOME}/.onerc") {
         ++$line;
         next if /^#|^\s*$/;     # omit comments and empty lines
         (my ($arg, $command) = /^
-                                ([^ ]+) # argument
-                                \s      # separator
+                                (\S+)   # argument
+                                \s+     # separator
                                 (.+)    # command
                                 $/x) or die "invalid syntax in line $line: $_";
         $commands{$arg} = $command;
