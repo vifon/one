@@ -164,7 +164,7 @@ The config file F<~/.onerc> has a very simple syntax:
 
 For the default "s" option it would be
 
-    s sudo aptitude search
+    s aptitude search
 
 The separator between I<name> and I<arbitrary_command_to_run> can be any
 whitespace character.
