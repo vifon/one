@@ -199,4 +199,6 @@ my $cmd = $commands{$arg} //
           (unshift(@ARGV, $arg) && $commands{"--"}); # oops, the arg was not an arg
                                                      # recover the package name
 
+$_ = "'$_'" for @ARGV;          # quote arguments
+
 exec "$cmd @ARGV";
