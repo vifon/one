@@ -86,11 +86,23 @@ Search for packages containing matching files.
 
 Command: apt-file search
 
+=item B<F> I<regex>
+
+Search for packages containing matching files.
+
+Command: apt-file search -x
+
 =item B<l> I<package>
 
-List files owned by the package.
+List files owned by the package (which must be installed).
 
 Command: dpkg -L
+
+=item B<L> I<package>
+
+List files owned by the package (which must B<not> be installed).
+
+Command: apt-file list
 
 =item B<o> I<file>
 
@@ -116,6 +128,12 @@ Perform full system upgrade.
 
 Command: sudo aptitude update && sudo aptitude full-upgrade
 
+=item B<rm> I<packeges>
+
+Remove the specified packages.
+
+Command: sudo aptitude purge
+
 =back
 
 =cut
@@ -128,11 +146,14 @@ my %commands = (
                 s    => "aptitude search",
                 i    => "aptitude show",
                 f    => "apt-file search",
+                F    => "apt-file search -x",
                 l    => "dpkg -L",
+                L    => "apt-file list",
                 o    => "dpkg -S",
                 w    => "aptitude why",
                 u    => "sudo aptitude update && sudo aptitude upgrade",
                 uu   => "sudo aptitude update && sudo aptitude full-upgrade",
+                rm   => "sudo aptitude purge",
                 moo  => <<EOF,
 echo '
                      @@@@@@ @
