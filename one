@@ -41,10 +41,29 @@ B<one> [ -- ] I<packages_to_install> ...
     One Tool to install them all and in the darkness run them
 
 One provides a unified interface for Debian package manager which is quite
-fragmented (dpkg, aptitude, apt-get, apt-cache, apt-file...). Just one simple
-extensible tool combining the most frequently used functions of the mentioned
-tools. The available functions are fully customizable - One can even be adjusted
-to a completely different package manager.
+fragmented (I<dpkg>, I<aptitude>, I<apt-get>, I<apt-cache>,
+I<apt-file>...). Just one simple extensible tool combining the most frequently
+used functions of the mentioned tools. The available functions are fully
+customizable - One can even be adjusted to a completely different package
+manager.
+
+=head1 GOALS
+
+=over 4
+
+=item * a single central program to run each command (no need to remember when
+we should use I<apt-get> instead of I<aptitude>)
+
+=item * simple and flexible configuration
+
+=item * as little overhead as possible - no output parsing etc., just a simple exec
+
+=item * no custom commands by default - uses only the well-tested standard
+Debian commands
+
+=item * short commands inspired by the I<equery> tool in Gentoo
+
+=back
 
 =head1 OPTIONS
 
